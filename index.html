@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Photosynthesis</title>
+    <link rel="stylesheet" type="text/css" href="CSS/styles.css" />
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a class="current" href="#">Home</a></li>
+            <li><a href="leaf-color.html">Color</a></li>
+            <li><a href="energy-from-sun.html">Energy</a></li>
+            <li><a href="supplies.html">Supplies</a></li>
+            <li><a href="photosynthesis.html">How Photosynthesis Happens</a></li>
+            <li><a href="byproducts.html">Products</a></li>
+            <li><a href="equation.html">Chemical Equation</a></li>
+            <li><a href="respiration.html">Respiration</a></li>
+        </ul>
+    </nav>
+    <div align="center" class="slideshow">
+        <img class="slide" src="Images/pic1.png" name="pic" id="pic" />
+        <div class="buttons">
+            <strong id="prev" onclick="swapDown()"><font color="white">Prev.</font></strong>
+            <strong id="next" onclick="swapUp()"><font color="white">Next</font></strong>
+        </div>
+        <script>
+            function swapUp() {
+                if (document.getElementById("pic").src.endsWith('pic1.png')) {
+                    document.getElementById("pic").src = "Images/pic2.png";
+                    document.getElementById("caption") = "The leaves absorb carbon dioxide and release oxygen.";
+                } else if (window.document.pic.src.endsWith('pic2.png')) {
+                    document.getElementById("pic").src = "Images/pic3.png";
+                    document.getElementById("caption") = "Chloroplasts absorb radiant energy from the sun to make food.";
+                } else {
+                    document.getElementById("pic").src = "Images/pic1.png";
+                    document.getElementById("caption"). = "Water is drawn up through the roots of the plant.";
+                }
+            }
+
+            function swapDown() {
+                if (document.getElementById("pic").src.endsWith('pic1.png')) {
+                    document.getElementById("pic").src = "Images/pic3.png";
+                    document.getElementById("caption") = "Chloroplasts absorb radiant energy from the sun to make food.";
+                } else if (window.document.pic.src.endsWith('pic2.png')) {
+                    document.getElementById("pic").src = "Images/pic1.png";
+                    document.getElementById("caption") = "Water is drawn up through the roots of the plant.";
+                } else {
+                    document.getElementById("pic").src = "Images/pic2.png";
+                    document.getElementById("caption") = "The leaves absorb carbon dioxide and release oxygen.";
+                }
+            }
+        </script>
+    </div>
+    <style>
+        #prev {
+            position: absolute;
+            margin: -0px -35px 0 -289px;
+            text-decoration: none;
+            font-family: sans-serif;
+            background-color: #41a9e5;
+            padding: 4px;
+            border-radius: 2px;
+        }
+
+        #prev:hover {
+            position: absolute;
+            text-decoration: none;
+            font-family: sans-serif;
+            background-color: #2f79a4;
+            padding: 4px;
+            border-radius: 2px;
+        }
+
+        #next {
+            position: absolute;
+            margin: -0px -35px 0 247px;
+            text-decoration: none;
+            font-family: sans-serif;
+            background-color: #cf2525;
+            padding: 4px;
+            border-radius: 2px;
+        }
+
+        #next:hover {
+            position: absolute;
+            text-decoration: none;
+            font-family: sans-serif;
+            background-color: #a41d1d;
+            padding: 4px;
+            border-radius: 2px;
+        }
+
+        .slide {
+            position: relative;
+            width: auto;
+            height: auto;
+            border: 2px solid green;
+            border-radius: 2px;
+            margin-top: 5px;
+        }
+
+        #caption {
+            border: 2px solid green;
+            border-radius: 2px;
+            background-color: lawngreen;
+            color: white;
+            padding: 5px;
+            display: inline-block;
+            max-width: 24em;
+        }
+    </style>
+</body>
+</html>
